@@ -1,3 +1,11 @@
+table {
+  width: -webkit-fill-available;
+}
+
+th {
+  color: white;
+}
+
 .filter-icon {
   font-size: 16px;
   margin-left: 5px;

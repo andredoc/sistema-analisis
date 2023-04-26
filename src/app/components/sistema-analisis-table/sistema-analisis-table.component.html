@@ -7,6 +7,6 @@
     <td mat-cell *matCellDef="let element" [style.text-align]="'center'">{{element[header.columnKey]}}</td>
   </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-  <tr mat-row *matRowDef="let row; columns: columnsToDisplay;" class="white-row"></tr>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="white-row"></tr>
 </table>
