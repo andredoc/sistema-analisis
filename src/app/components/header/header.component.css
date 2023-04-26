@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  background-color: red;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.header-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  margin-right: 20px; /* opcional, agrega un margen a la derecha para separar la imagen del título */
+}
+
+.header-image img {
+  width: 100px;
+  height: 100px;
+}
+
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
