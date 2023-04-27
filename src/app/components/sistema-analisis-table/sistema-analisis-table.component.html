@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="dataSource" class="gray-header">
+<table mat-table [dataSource]="dataSource" class="gray-header" matSort>
   <ng-container *ngFor="let header of headers; let i = index" matColumnDef="{{header.columnKey}}">
     <th mat-header-cell *matHeaderCellDef mat-sort-header [style.text-align]="'center'">
       {{header.label}}

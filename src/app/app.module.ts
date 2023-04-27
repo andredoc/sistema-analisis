@@ -15,6 +15,7 @@ import { ButtonImportComponent } from './components/button-import/button-import.
 import { HeaderOption2Component } from './components/header-option2/header-option2.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     MatDialogModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

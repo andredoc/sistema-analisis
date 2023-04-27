@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DocumentsService } from './services/documents.service';
+import { Observable, Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'sistema-analisis';
   headers = [
     {
@@ -37,10 +39,19 @@ export class AppComponent {
       columnKey: 'estado'
     }
   ]
+  data$!: Observable<any>;
 
-  data = [
-    { aplicacion: 'Sistema 1', fechaSolicitud: '01/01/2022', tipoPeticion: 'Tipo 1', fuenteInformacion: 'Fuente 1', modeloSolicitado: 'Modelo 1', usuario: 'Usuario 1', estado: 'En proceso' },
-    { aplicacion: 'Sistema 2', fechaSolicitud: '02/01/2022', tipoPeticion: 'Tipo 2', fuenteInformacion: 'Fuente 2', modeloSolicitado: 'Modelo 2', usuario: 'Usuario 2', estado: 'Completado' },
-    { aplicacion: 'Sistema 3', fechaSolicitud: '03/01/2022', tipoPeticion: 'Tipo 3', fuenteInformacion: 'Fuente 3', modeloSolicitado: 'Modelo 3', usuario: 'Usuario 3', estado: 'En espera' }
-  ];
+  constructor(private documentsService: DocumentsService) {}
+
+  ngOnInit() {
+    this.getDocumentsList()
+  }
+
+  getDocumentsList() {
+    this.data$ = this.documentsService.getDocuments();
+    console.log('update list');
+  }
+
 }
+
+
