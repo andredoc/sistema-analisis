@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { DocumentsService } from '../../services/documents.service';
+
 
 export interface IHeaders {
   label: string,
@@ -17,11 +19,19 @@ export class SistemaAnalisisTableComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
   displayedColumns: string[] = [];
 
-  constructor() { }
+  constructor(private documentsService: DocumentsService) { }
 
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource<any>(this.data);
     this.displayedColumns = this.headers.map(header => header.columnKey)
+    this.documentsService.getDocuments().subscribe(
+      (data) => {
+        console.log(data);
+      },
+      (error) => {
+        console.error(error);
+      }
+      );
   }
 
 }

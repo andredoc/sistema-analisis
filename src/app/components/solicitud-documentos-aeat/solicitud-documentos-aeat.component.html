@@ -1,28 +1,29 @@
-<mat-dialog-content>
-  <div class="header">
-    <mat-icon>info</mat-icon>
-    <h2 class="title">Solicitud documentos AEAT</h2>
-  </div>
-  <div class="divider"></div>
+<h2 mat-dialog-title>
+  <mat-icon>info</mat-icon>
+  <span>Solicitud de documentos AEAT</span>
+</h2>
+<div mat-dialog-content>
   <form>
-    <mat-form-field>
-      <mat-label>Tipo de Modelo</mat-label>
-      <mat-select>
-        <mat-option value="a">A</mat-option>
-        <mat-option value="b">B</mat-option>
-        <mat-option value="c">C</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br />
-    <mat-form-field>
-      <mat-label>Código CSV</mat-label>
-      <input type="number" matInput />
-    </mat-form-field>
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label for="tipoModelo">Tipo de modelo</mat-label>
+        <mat-select formControlName="tipoModelo" id="tipoModelo">
+          <mat-option value="A">A</mat-option>
+          <mat-option value="B">B</mat-option>
+          <mat-option value="C">C</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <br>
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label for="codigoCSV">Código CSV</mat-label>
+        <input matInput formControlName="codigoCSV" id="codigoCSV" required>
+      </mat-form-field>
+    </div>
   </form>
-</mat-dialog-content>
-
-<mat-dialog-actions>
+</div>
+<div mat-dialog-actions>
   <button mat-button (click)="dialogRef.close()">Cancelar</button>
-  <button mat-button color="primary" (click)="onSubmit()">Aceptar</button>
-</mat-dialog-actions>
-
+  <button mat-button color="primary" (click)="enviar()">Aceptar</button>
+</div>

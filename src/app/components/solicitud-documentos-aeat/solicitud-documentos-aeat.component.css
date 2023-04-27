@@ -1,15 +1,8 @@
-.header {
-  display: flex;
-  align-items: center;
-}
-
-.title {
-  margin: 0 auto;
-  text-align: center;
-  color: black;
-}
-
-.divider {
-  border-top: 1px solid green;
-  margin: 10px 0;
+h2.mat-dialog-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: green;
+  width: 100%;
+  margin-top: 8px;
 }

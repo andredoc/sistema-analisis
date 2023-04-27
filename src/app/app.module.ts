@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ButtonImportComponent } from './components/button-import/button-import.component';
 import { HeaderOption2Component } from './components/header-option2/header-option2.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatFormFieldModule,
     MatSelectModule,
     MatDialogModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
