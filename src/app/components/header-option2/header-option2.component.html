@@ -1,0 +1,6 @@
+<mat-toolbar color="primary">
+  <ng-container *ngIf="imagen">
+    <img [src]="imagen" alt="Imagen" width="100" height="100" />
+  </ng-container>
+  <span class="titulo">{{ titulo }}</span>
+</mat-toolbar>
