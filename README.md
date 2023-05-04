@@ -95,3 +95,5 @@ A mi entender, ChatGpt responde mejor cuando: <br>
 1.-Separo el requerimiento en componentes independientes y funcionales, los mismos que pueden ser reutilizables (header, table, button, modal, etc) <br>
 2.-Ingreso el prompt como lista de tareas <br>
 3.-Brindo mayor información técnica (ejemplo: "componente al ser cargado con MatDialog de angular material se divida en tres partes: mat-dialog-title, mat-dialog-content y mat-dialog-actions") <br>
+4.-Se debe brindar un prompt claro y con instrucciones específicas . Esto puede requerir que el prompt sea más largo para dar claridad y contexto al output deseado. Utilizar prompts cortos y continuados tiende a hacer que el nuevo código reemplace partes del código anterior <br> 
+5.-CUIDADO: Si no sabe la respuesta, ChatGpt en la mayoría de las veces brindará una respuesta incorrecta con confianza en lugar de decir que no sabe la respuesta <br>
